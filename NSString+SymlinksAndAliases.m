@@ -221,7 +221,7 @@
 				CFURLRef resolvedUrl = CFURLCreateFromFSRef(kCFAllocatorDefault, &fsRef);
 				if (resolvedUrl != NULL)
 				{
-					resolvedPath = (__bridge NSString *)CFURLCopyFileSystemPath(resolvedUrl, kCFURLPOSIXPathStyle);
+					resolvedPath = (__bridge_transfer NSString *)CFURLCopyFileSystemPath(resolvedUrl, kCFURLPOSIXPathStyle);
 					CFRelease(resolvedUrl);
 				}
 			}
